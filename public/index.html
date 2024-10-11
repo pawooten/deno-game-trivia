@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deno Game Trivia</title>
+        <link rel="stylesheet" href="game-trivia.css" />
+    </head>
+    <body>
+        <h1>Deno Game Trivia</h1>
+        <section>
+            <h3>Connection</h3>
+            <input type="text" id="game-id" placeholder="Game ID"/>
+            <button type="button" id="game-connect"  onclick="onGameConnectClicked()">Connect</button>
+        </section>
+        <section>
+            <h3 id="game-label">No Game</h3>
+            <div class="game-container">
+                <div id="game-answer-list"></div>
+                <pre id="game-log"></pre>    
+            </div>
+        </section>
+        <script src="game-trivia.js"></script>
+    </body>
+</html>

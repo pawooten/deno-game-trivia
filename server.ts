@@ -3,7 +3,8 @@ import { getGamePrompt } from './game-prompter.ts';
 
 export const initializeServer = () => {
     const app = express();
-    app.get('/', (req, res) => {
+    app.use(express.static('public'));
+    app.get('/prompt', (req, res) => {
         const { prompt } = getGamePrompt();
         res.send(prompt);
     });
